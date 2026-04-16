@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: xbatis-admin
+  datasource:
+    url: jdbc:postgresql://localhost:5432/xbatis_admin
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jackson:
+    default-property-inclusion: non_null
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+app:
+  security:
+    jwt-secret: NjQ1ODFhN2U2MjkzZWQyNDFhNWY4ZWQ3YjQ1YTM1MDFmNmNiZjg0ZTFkZTBkMDU4N2Q4MDEwZmM4MzE4YjQ4Mw==
+    access-token-expire-minutes: 720
